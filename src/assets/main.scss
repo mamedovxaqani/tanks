@@ -56,6 +56,7 @@ body {
   width: 600px;
   height: 600px;
   border-radius: 10px;
+  display: none;
 
   &__section {
     width: 100%;
@@ -63,5 +64,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__show {
+    display: block;
+  }
+}
+
+.game {
+  &__start {
+    color: white;
+    background-color: #004bd5;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__over {
+    color: white;
+    background-color: #dd1709;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
   }
 }
