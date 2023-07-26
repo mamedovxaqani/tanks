@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/style.css":
-/*!***********************!*\
-  !*** ./src/style.css ***!
-  \***********************/
+/***/ "./src/assets/main.scss":
+/*!******************************!*\
+  !*** ./src/assets/main.scss ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tanks/./src/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tanks/./src/assets/main.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _classes_UserTank__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/UserTank */ \"./src/classes/UserTank.js\");\n/* harmony import */ var _functions_keyDownEvent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/keyDownEvent */ \"./src/functions/keyDownEvent.js\");\n\n\nfunction App () {\n    const tank = new _classes_UserTank__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('orange', 25, 15)\n    const canvas = document.querySelector('.canvas')\n    const context = canvas.getContext('2d')\n    tank.draw(context)\n    ;(0,_functions_keyDownEvent__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(tank, context)\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://tanks/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _classes_UserTank__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/UserTank */ \"./src/classes/UserTank.js\");\n/* harmony import */ var _functions_keyDownEvent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/keyDownEvent */ \"./src/functions/keyDownEvent.js\");\n/* harmony import */ var _functions_startGame__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/startGame */ \"./src/functions/startGame.js\");\n\n\n\n\nfunction App() {\n  const start__game = document.querySelector(\".game__start\");\n  const canvas = document.querySelector(\".canvas\");\n  const context = canvas.getContext(\"2d\");\n  const tank = new _classes_UserTank__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"orange\", 25, 15);\n  tank.draw(context);\n  (0,_functions_keyDownEvent__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(tank, context);\n\n  start__game.addEventListener(\"click\", () => {\n    (0,_functions_startGame__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(canvas, start__game);\n  });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://tanks/./src/app.js?");
 
 /***/ }),
 
@@ -46,7 +46,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction Canvas () {\n    const canvasSection = document.createElement('section')\n    canvasSection.classList.add('canvas__section')\n\n    const canvas = document.createElement('canvas')\n    canvas.classList.add('canvas')\n    canvasSection.append(canvas)\n\n    return canvasSection\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Canvas);\n\n//# sourceURL=webpack://tanks/./src/components/canvas/canvas.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction Canvas() {\n  const canvasSection = document.createElement(\"section\");\n  canvasSection.classList.add(\"canvas__section\");\n\n  const canvas = document.createElement(\"canvas\");\n\n  canvas.classList.add(\"canvas\");\n  canvasSection.append(canvas);\n\n  return canvasSection;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Canvas);\n\n\n//# sourceURL=webpack://tanks/./src/components/canvas/canvas.js?");
+
+/***/ }),
+
+/***/ "./src/components/game/startGame.js":
+/*!******************************************!*\
+  !*** ./src/components/game/startGame.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction startGame() {\n  const startButton = document.createElement(\"button\");\n  startButton.innerHTML = \"Start Game\";\n  startButton.classList.add(\"game__start\");\n  return startButton;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (startGame);\n\n\n//# sourceURL=webpack://tanks/./src/components/game/startGame.js?");
 
 /***/ }),
 
@@ -90,13 +100,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/functions/startGame.js":
+/*!************************************!*\
+  !*** ./src/functions/startGame.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction startGame(canvas, start__game) {\n  canvas.classList.toggle(\"canvas__show\");\n\n  if (canvas.classList.contains(\"canvas__show\")) {\n    start__game.innerHTML = \"Finish the Game\";\n    start__game.classList.add(\"game__over\");\n    start__game.classList.remove(\"game__start\");\n  } else if (!canvas.classList.contains(\"canvas__show\")) {\n    start__game.innerHTML = \"Start the Game\";\n    start__game.classList.add(\"game__start\");\n    start__game.classList.remove(\"game__over\");\n  }\n}\n\n\n\n\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (startGame);\n\n//# sourceURL=webpack://tanks/./src/functions/startGame.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header/header */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_canvas_canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/canvas/canvas */ \"./src/components/canvas/canvas.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app */ \"./src/app.js\");\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    const root = document.querySelector('.root')\n    root.append((0,_components_header_header__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(), (0,_components_canvas_canvas__WEBPACK_IMPORTED_MODULE_2__[\"default\"])())\n\n    ;(0,_app__WEBPACK_IMPORTED_MODULE_3__[\"default\"])()\n})\n\n\n//# sourceURL=webpack://tanks/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/main.scss */ \"./src/assets/main.scss\");\n/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header/header */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_game_startGame__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/game/startGame */ \"./src/components/game/startGame.js\");\n/* harmony import */ var _components_canvas_canvas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/canvas/canvas */ \"./src/components/canvas/canvas.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app */ \"./src/app.js\");\n\n\n\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const root = document.querySelector(\".root\");\n\n  root.append((0,_components_header_header__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(), (0,_components_game_startGame__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(), (0,_components_canvas_canvas__WEBPACK_IMPORTED_MODULE_3__[\"default\"])());\n  (0,_app__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n});\n\n\n//# sourceURL=webpack://tanks/./src/index.js?");
 
 /***/ })
 

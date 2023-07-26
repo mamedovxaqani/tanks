@@ -1,6 +1,6 @@
-/*!********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.css ***!
-  \********************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/main.scss ***!
+  \***************************************************************************************************************/
 * {
   padding: 0;
   margin: 0; }
@@ -10,32 +10,50 @@ body {
 
 .header {
   background-image: radial-gradient(circle at 93.44% 19.58%, #fa9672 0, #fc8e77 6.25%, #fd857c 12.5%, #fc7b81 18.75%, #f97186 25%, #f3658c 31.25%, #ec5992 37.5%, #e14e98 43.75%, #d4429f 50%, #c439a6 56.25%, #b135af 62.5%, #9a35b8 68.75%, #7e39c0 75%, #5a3fc9 81.25%, #0e45d0 87.5%, #004bd5 93.75%, #0050d9 100%); }
-
-.header__container {
-  width: calc(1440px / 2);
-  margin: 0 auto;
-  max-width: 100%; }
-
-.header__link {
-  color: white;
-  display: block;
-  text-align: center;
-  font-family: "Arial";
-  font-style: italic;
-  font-size: 40px; }
+  .header__container {
+    width: calc(1440px / 2);
+    margin: 0 auto;
+    max-width: 100%; }
+  .header__link {
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 40px; }
 
 /* canvas section */
-.canvas__section {
-  width: 100%;
-  height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-canvas {
+.canvas {
   border: 1px solid #aaa;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 600px;
   height: 600px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  display: none; }
+  .canvas__section {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .canvas__show {
+    display: block; }
+
+.game__start {
+  color: white;
+  background-color: #004bd5;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none; }
+  .game__start:hover {
+    opacity: 0.8; }
+
+.game__over {
+  color: white;
+  background-color: #dd1709;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none; }
 
