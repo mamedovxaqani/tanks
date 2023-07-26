@@ -1,12 +1,12 @@
 import headerContainer from "./headerContainer";
 
-function Header () {
-    const headerTag = document.createElement('header')
-    headerTag.classList.add('header')
+function Header() {
+  const headerTag = document.createElement("header");
+  headerTag.classList.add("header");
 
-    headerTag.append(headerContainer())
+  headerTag.append(headerContainer());
 
-    return headerTag
+  return headerTag;
 }
 
-export default Header
+export default Header;

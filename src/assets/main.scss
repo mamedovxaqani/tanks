@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: green;
+}
+
+.header {
+  background-image: radial-gradient(
+    circle at 93.44% 19.58%,
+    #fa9672 0,
+    #fc8e77 6.25%,
+    #fd857c 12.5%,
+    #fc7b81 18.75%,
+    #f97186 25%,
+    #f3658c 31.25%,
+    #ec5992 37.5%,
+    #e14e98 43.75%,
+    #d4429f 50%,
+    #c439a6 56.25%,
+    #b135af 62.5%,
+    #9a35b8 68.75%,
+    #7e39c0 75%,
+    #5a3fc9 81.25%,
+    #0e45d0 87.5%,
+    #004bd5 93.75%,
+    #0050d9 100%
+  );
+
+  &__container {
+    width: calc(1440px / 2);
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  &__logo {
+  }
+
+  &__link {
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 40px;
+  }
+}
+
+/* canvas section */
+
+.canvas {
+  border: 1px solid #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+
+  &__section {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
