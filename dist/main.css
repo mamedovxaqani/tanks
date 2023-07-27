@@ -29,6 +29,7 @@ body {
   width: 600px;
   height: 600px;
   border-radius: 10px;
+  background-color: black;
   display: none; }
   .canvas__section {
     width: 100%;
