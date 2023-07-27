@@ -39,15 +39,35 @@ body {
   .canvas__show {
     display: block; }
 
+.game__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vw; }
+
+.game__title {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+  font-size: 17px;
+  margin: 30px 0;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic; }
+
 .game__start {
   color: white;
-  background-color: #004bd5;
+  background-color: #004bd6;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 10px;
-  border: none; }
+  box-shadow: 0px 2px 5px black;
+  border: none;
+  transition: 0.3s linear; }
   .game__start:hover {
-    opacity: 0.8; }
+    background-color: green; }
 
 .game__over {
   color: white;

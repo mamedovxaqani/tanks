@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.querySelector(".root");
 
   root.append(Header(), startGame(), Canvas());
-  App();
+  App(root);
 });
